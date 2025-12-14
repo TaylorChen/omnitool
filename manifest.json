@@ -1,0 +1,39 @@
+{
+    "manifest_version": 3,
+    "name": "OmniTool",
+    "version": "0.1.0",
+    "description": "A collection of useful browser tools including password generator and 2FA authenticator",
+    "author": "OmniTool Team",
+    "icons": {
+        "16": "assets/icons/icon16.png",
+        "48": "assets/icons/icon48.png",
+        "128": "assets/icons/icon128.png"
+    },
+    "action": {
+        "default_popup": "popup/popup.html",
+        "default_icon": {
+            "16": "assets/icons/icon16.png",
+            "48": "assets/icons/icon48.png"
+        },
+        "default_title": "OmniTool"
+    },
+    "permissions": [
+        "storage",
+        "clipboardWrite",
+        "alarms",
+        "downloads"
+    ],
+    "background": {
+        "service_worker": "background/service-worker.js"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "modules/jsqr.min.js"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
+}
